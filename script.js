@@ -8,3 +8,9 @@ function sendOrder(productName) {
 }
 
 console.log("Jacomossi System Online. Deploying style...");
+
+function redirectAlbum(albumName) {
+    alert("You are now entering the soul of: " + albumName);
+    // Aqui você pode mudar para um link real depois
+    // window.location.href = "pagina-do-album.html"; 
+}

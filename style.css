@@ -56,3 +56,33 @@ header {
     background: #fff;
     color: #000;
 }
+
+.album-carousel {
+    display: flex;
+    overflow-x: auto; /* Permite arrastar pro lado */
+    gap: 20px;
+    padding: 20px 0;
+    scroll-behavior: smooth;
+}
+
+/* Esconde a barra de rolagem feia */
+.album-carousel::-webkit-scrollbar { display: none; }
+
+.album-card {
+    min-width: 200px;
+    cursor: pointer;
+    transition: 0.4s;
+    text-align: center;
+}
+
+.album-card img {
+    width: 100%;
+    border-radius: 10px;
+    filter: grayscale(100%); /* Estética Peep: tudo P&B */
+    transition: 0.5s;
+}
+
+.album-card:hover img {
+    filter: grayscale(0%); /* Ganha cor no hover */
+    transform: scale(1.1);
+}
