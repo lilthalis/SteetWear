@@ -1,74 +1,58 @@
-/* Minimalist Dark Theme */
+/* Lil Peep x Jacomossi Floating Aesthetic */
 body {
-    background-color: #050505;
-    color: #ffffff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    line-height: 1.6;
+    background: linear-gradient(45deg, #0a0a0a, #1a0a1a); /* Deep moody purple/black */
+    color: #fff;
+    font-family: 'Helvetica Neue', sans-serif;
+    overflow-x: hidden;
 }
 
 header {
-    height: 60vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid #1a1a1a;
+    animation: float 6s ease-in-out infinite; /* The "Floating" effect */
 }
 
 .logo {
-    font-size: 4rem;
-    letter-spacing: 12px;
-    margin: 0;
-}
-
-.subtitle {
-    color: #888;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-}
-
-.container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 40px 20px;
-}
-
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    font-size: 5rem;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    letter-spacing: 15px;
 }
 
 .card {
-    background: #0a0a0a;
-    border: 1px solid #1a1a1a;
-    padding: 20px;
-    text-align: center;
-    transition: 0.4s ease;
+    background: rgba(255, 255, 255, 0.05); /* Glass effect */
+    backdrop-filter: blur(10px); /* Blurry background */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .card:hover {
-    border-color: #ffd700; /* Gold accent */
-    transform: translateY(-10px);
+    transform: translateY(-20px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+    border-color: #ff0055; /* Peep's signature pink/red accent */
 }
 
-.image-placeholder {
-    background: #111;
-    height: 300px;
-    margin-bottom: 15px;
+/* Floating Animation Code */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
 }
 
 .btn-order {
-    background: #fff;
-    color: #000;
-    border: none;
-    padding: 12px 25px;
-    font-weight: bold;
-    cursor: pointer;
-    text-transform: uppercase;
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 50px;
+    transition: 0.3s;
 }
 
 .btn-order:hover {
-    background: #ffd700;
+    background: #fff;
+    color: #000;
 }
