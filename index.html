@@ -3,45 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JACOMOSSI | Streetwear Legacy</title>
+    <title>JACOMOSSI | Legacy</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.png"> 
 </head>
 <body>
 
     <header>
         <h1 class="logo">JACOMOSSI</h1>
-        <p class="subtitle">King Von Style | Giorno's Determination</p>
+        <p class="subtitle">The End Game | Systems & Streetwear</p>
     </header>
 
     <main class="container">
-        <section id="albums">
-    <h2 class="section-title">The Discography Legacy</h2>
-    <div class="album-carousel">
-        <div class="album-card" onclick="redirectAlbum('EVEN IF YOU DONT LOVE ME Pt. 1')">
-            <img src="capa-album1.jpg" alt="Even1">
-            <p>EVEN, Pt. 1</p>
-        </div>
-        <div class="album-card" onclick="redirectAlbum('EVEN IF YOU DONT LOVE ME Pt. 2')">
-            <img src="capa-album2.jpg" alt="Even2">
-            <p>EVEN, Pt. 2</p>
-        </div>
-        </div>
-</section>
-        <section id="shop">
-            <h2 class="section-title">First Drop: The End Game</h2>
+        <section id="legacy-albums">
+            <h2 class="section-title">Discography Inspiration</h2>
+            <div class="album-carousel">
+                <div class="album-card" onclick="openLegacy('COWYS Pt. 1')">
+                    <div class="album-img" style="background-image: url('album1.jpg');"></div>
+                    <p>COWYS Pt. 1</p>
+                </div>
+                <div class="album-card" onclick="openLegacy('COWYS Pt. 2')">
+                    <div class="album-img" style="background-image: url('album2.jpg');"></div>
+                    <p>COWYS Pt. 2</p>
+                </div>
+                <div class="album-card" onclick="openLegacy('EVERYBODYS EVERYTHING')">
+                    <div class="album-img" style="background-image: url('album3.jpg');"></div>
+                    <p>EE</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="products">
+            <h2 class="section-title">Your Custom Gear</h2>
             <div class="product-grid">
-                <div class="card">
-                    <div class="image-placeholder"></div>
-                    <h3>Classic Black Tee</h3>
-                    <p class="price">$ 29.99</p>
-                    <button class="btn-order" onclick="sendOrder('Classic Black Tee')">Order Now</button>
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('item-personalizado.jpg');"></div>
+                    <h3>Jacomossi Exclusive Tee</h3>
+                    <p class="price">$ 45.00</p>
+                    <button class="btn-buy" onclick="sendOrder('Exclusive Tee')">Pre-Order</button>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Jacomossi Legacy. All Rights Reserved.</p>
+        <p>&copy; 2026 Jacomossi Legacy. Built with Code and Blood.</p>
     </footer>
 
     <script src="script.js"></script>

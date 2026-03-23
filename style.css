@@ -1,88 +1,58 @@
-/* Lil Peep x Jacomossi Floating Aesthetic */
-body {
-    background: linear-gradient(45deg, #0a0a0a, #1a0a1a); /* Deep moody purple/black */
-    color: #fff;
-    font-family: 'Helvetica Neue', sans-serif;
-    overflow-x: hidden;
-}
-
-header {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    animation: float 6s ease-in-out infinite; /* The "Floating" effect */
-}
-
-.logo {
-    font-size: 5rem;
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-    letter-spacing: 15px;
-}
-
-.card {
-    background: rgba(255, 255, 255, 0.05); /* Glass effect */
-    backdrop-filter: blur(10px); /* Blurry background */
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    padding: 30px;
-    transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.card:hover {
-    transform: translateY(-20px) scale(1.05);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.8);
-    border-color: #ff0055; /* Peep's signature pink/red accent */
-}
-
-/* Floating Animation Code */
+/* EFEITO DE FLUTUAÇÃO GERAL */
 @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-    100% { transform: translateY(0px); }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
 }
 
-.btn-order {
-    background: transparent;
-    border: 2px solid #fff;
-    color: #fff;
-    padding: 15px 30px;
-    border-radius: 50px;
-    transition: 0.3s;
+.album-card, .product-card {
+    animation: float 6s ease-in-out infinite;
 }
 
-.btn-order:hover {
-    background: #fff;
-    color: #000;
-}
-
+/* CARROSSEL ESTILO LIL PEEP */
 .album-carousel {
     display: flex;
-    overflow-x: auto; /* Permite arrastar pro lado */
+    overflow-x: auto;
     gap: 20px;
-    padding: 20px 0;
-    scroll-behavior: smooth;
+    padding: 30px 10px;
+    scroll-snap-type: x mandatory;
 }
 
-/* Esconde a barra de rolagem feia */
 .album-carousel::-webkit-scrollbar { display: none; }
 
 .album-card {
     min-width: 200px;
+    scroll-snap-align: center;
     cursor: pointer;
-    transition: 0.4s;
     text-align: center;
 }
 
-.album-card img {
-    width: 100%;
+.album-img {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
     border-radius: 10px;
-    filter: grayscale(100%); /* Estética Peep: tudo P&B */
+    filter: grayscale(100%);
     transition: 0.5s;
+    border: 1px solid rgba(255,255,255,0.1);
 }
 
-.album-card:hover img {
-    filter: grayscale(0%); /* Ganha cor no hover */
-    transform: scale(1.1);
+.album-card:hover .album-img {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+    border-color: #ff0055;
+}
+
+/* GRID DE PRODUTOS */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.product-image {
+    height: 350px;
+    background-color: #111;
+    background-size: cover;
+    border-radius: 15px;
 }
